@@ -41,4 +41,4 @@ class MyListener(StreamListener):
 
 #Set the hashtag to be searched
 twitter_stream = tweepy.Stream(auth, MyListener())
-twitter_stream.filter(track=['#bellletstalk'])
+twitter_stream.filter(track=['#basketball'])

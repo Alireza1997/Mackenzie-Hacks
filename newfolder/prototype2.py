@@ -25,10 +25,15 @@ class StdOutListener(StreamListener):
     def on_error(self, status):
         print(status)
 
+search = input('Enter search criteria\n')
+
+
 if __name__ == '__main__':
     l = StdOutListener()
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
 
+
+
     stream = Stream(auth, l)
-    stream.filter(track=['#bellletstalk'])
+    stream.filter(track=[search])
