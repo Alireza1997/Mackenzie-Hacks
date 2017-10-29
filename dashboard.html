@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script> 
+    var dateControl = document.querySelector('input[type="datetime-local"]');
+    dateControl.value = '2017-06-01T08:30';
+</script>
+<script>
+	$("a").click(function(){
+	    $("a").removeClass("active");
+	    $(this).addClass("active");
+	});
+</script>
+<script>
+	$('a').mouseenter(function(){
+	    $(this).animate({
+	        color: '#ff0000'
+	    }, 1000);
+	}).mouseout(function(){
+	    $(this).animate({
+	        color: '#ff0000'
+	    }, 1000);
+	});
+</script>
+<script>
+	function myFunction() {
+	    location.reload();
+	}
+</script>
+<head>
+   <!-- <style> 
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            position:relative;  
+            left:20%;
+            margin-top:25%;
+            width:60%;
+        }
+        input[type=text]:focus {
+        width: 100%;
+        }
+        body {
+            background-color: #01012d;
+        }
+    </style>-->
+
+    <style>
+        body{
+            background: #912cc3;
+            font-family: "Helvetica",sans-serif;
+        }
+        h1 {
+            font-family: "Helvetica",sans-serif;
+        }
+
+        .box{
+            margin-left: 20%;
+            margin-top: 10%;
+            width: 60%;
+            height: 50px;
+            border-bottom: 1px solid;
+            border-color: white;
+        }
+        .alpha{
+            margin-left: 20%;
+            margin-top: 2%;
+            width: 80%;
+        }
+        #party, #partys{
+            margin-left: 33.5%;
+            margin-top: 3%;
+            width: 11%;
+            text-align: center;
+        }
+        #partys{
+            margin-left: 5%;
+            margin-top: 3%;
+            width: 11%;
+            text-align: center;
+        }
+        .gamma{
+            margin-left: 11.5%;
+            margin-top: 2%;
+            width: 80%;
+        }
+        #test {
+            color: white;
+        }
+        .container-1 {
+            width: 100%;
+            vertical-align: middle;
+            white-space: nowrap;
+            position: relative;
+        }
+        .box input#test{
+            width: 100%;
+            height: 50px;
+            background: rgba(177, 201, 255, 0.00);
+            border: none;
+            font-size: 20pt;
+            float: left;
+            padding-left: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            /*font-family: "Chronicle SSm",Georgia,Times,"Times New Roman",serif;*/
+        }
+        #party, #partys{
+            background: rgba(243, 128, 148, 0.7);
+            border: none;
+            font-size: 20pt;
+            float: left;
+            color: white;
+            font-style: white;
+            padding-left: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            /*font-family: "Chronicle SSm",Georgia,Times,"Times New Roman",serif;*/
+        }
+        .go {
+            background: rgba(243, 128, 148, 0.7);
+            border: none;
+            font-size: 20pt;
+            float: left;
+            color: white;
+            font-style: red;
+            padding-left: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            margin-left: 45%;
+            margin-top: 8%;
+
+            /*font-family: "Chronicle SSm",Georgia,Times,"Times New Roman",serif;*/
+        }
+        }
+        .container-4 {
+            overflow: hidden;
+            width: 100%;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .container-4 input#search {
+            width: 100%;
+            height: 50px;
+            background: #2b303b;
+            border: none;
+            font-size: 10pt;
+            float: left;
+            color: #fff;
+            padding-left: 15px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        img {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+        p {
+            float: left;
+            margin-top: 3.1%;
+            margin-left: 5%;
+            font-size: 25px;
+            color: white;
+        }
+
+        a:hover img, a:focus img, a.active img {
+    		filter: none;
+            -webkit-filter: grayscale(0%);
+        }
+    </style>
+</head>
+
+<body>
+<h1 style="color: #e3f1ff; font-size: 80px;"><strong>Search your thing<strong></h1>
+<h2 style="color: #e3f1ff; font-size: 35px; margin-top: 5%">Timeline for Analysis</h1>
+
+<!--<label class = "leggo" for="party">Enter a date and time for your party booking:</label>-->
+<input id="party" type="date-local" name="partydate" value="2017-10-29">
+<p> To </p>
+<input id="partys" type="date-local" name="partydate" value="2017-10-29">
+<div class="box">
+    <form>
+        <input color="white" type="text" id="test" name="search" placeholder="Type your search here"/>
+    </form>
+    <!--<div class="container-1">
+      <span class="icon"><i class="fa fa-search"></i></span>
+      <input type="search" id="search" placeholder="Search..." />
+  </div>-->
+</div>
+<div class="social">
+<span class="image">
+    <a href="#"><img class = "alpha" style="height: 6%; width: 6%" src="http://www.freepngimg.com/download/twitter/9-2-twitter-high-quality-png.png" alt="W3Schools.com"></a>
+</span>
+<span class="image">
+    <a href="#"><img class = "gamma" style="height: 7%; width: 7%" src="https://blog.addthiscdn.com/wp-content/uploads/2015/11/logo-facebook.png" alt="W3Schools.com"></a>
+</span>
+<span class="image">
+    <a href="#"><img class = "gamma" style="height: 6%; width: 6%" src="https://lh3.googleusercontent.com/J41hsV2swVteoeB8pDhqbQR3H83NrEBFv2q_kYdq1xp9vsI1Gz9A9pzjcwX_JrZpPGsa=w300" alt="W3Schools.com"></a>
+</span>
+<span class="image">
+    <a href="#"><img class = "gamma" style="height: 6%; width: 6%" src="https://lh3.googleusercontent.com/aYbdIM1abwyVSUZLDKoE0CDZGRhlkpsaPOg9tNnBktUQYsXflwknnOn2Ge1Yr7rImGk=w300" alt="W3Schools.com"></a>
+</span>
+<div>
+<button type="button" class = "go" onclick="myFunction()" >Pull the data</button>
+</div>
+</body>
+</html>
