@@ -1,7 +1,6 @@
 from subprocess import call
 
-query = input("hashtag\n")
-keywords = input("keywords\n")
+query = input("query\n")
 start_date = input("start date\n")
 end_date = input("end date\n")
 limit = input("limit\n")
@@ -14,12 +13,12 @@ limit = input("limit\n")
 location = [
 "Toronto",
 "Ottawa",
-"Mississauga",
-"Brampton",
-"Hamilton",
+# "Mississauga",
+# "Brampton",
+# "Hamilton",
 "London",
 "Markham",
-"Kitchener",
+# "Kitchener",
 # "Windsor",
 # "Richmond%20Hill",
 # "Oakville",
@@ -67,27 +66,17 @@ location = [
 
 
 
-if (start_date != -1){
+if (start_date != -1):
 	for i in location:
-	part1 = '%23' #hashtag
-	part2 = query
-	part3 = '%20near%3A%22' #near	
-	part4 = i
-	part5 = '%2C%20Ontario%22%20within%3A15mi'
+		part1 = '%23' #hashtag
+		part2 = query
+		part3 = '%20near%3A%22' #near	
+		part4 = i
+		part5 = '%2C%20Ontario%22%20within%3A15mi'
+		part6 = '%20since%3A' + start_date + '%20until%3A' + end_date #2017-10-24
+		part7 = '&src=typd&lang=en' #rest of it
+		command = part1+part2+part3+part4+part5+part6+part7
+		print (command, "\n")
+		call(["twitterscraper" , command , "-l", limit ,"-o", i+".json"])	
 
-	if (start_date != -1): #2017-10-24
-		part6 = '%20since%3A' + start_date
-	else:
-		part6 = ''  
-
-	if (end_date != -1): #2017-10-24
-		part7 = '%20until%3A' + end_date 
-	else:
-		part7 = ''  
-
-	part8 = '&src=typd&lang=en' #rest of it
-	command = part1+part2+part3+part4+part5+part6+part7+part8
-	print (command, "\n")
-	call(["twitterscraper" , command , "-l", limit ,"-o", i+".json"])	
-}
 
