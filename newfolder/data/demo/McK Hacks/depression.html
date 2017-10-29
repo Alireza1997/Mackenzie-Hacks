@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script> 
+    var dateControl = document.querySelector('input[type="datetime-local"]');
+    dateControl.value = '2017-06-01T08:30';
+</script>
+<script>
+	$("a").click(function(){
+	    $("a").removeClass("active");
+	    $(this).addClass("active");
+	});
+</script>
+<script>
+	$('a').mouseenter(function(){
+	    $(this).animate({
+	        color: '#ff0000'
+	    }, 1000);
+	}).mouseout(function(){
+	    $(this).animate({
+	        color: '#ff0000'
+	    }, 1000);
+	});
+</script>
+<script>
+	function myFunction() {
+	    location.reload();
+	}
+</script>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- <style> 
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            position:relative;  
+            left:20%;
+            margin-top:25%;
+            width:60%;
+        }
+        input[type=text]:focus {
+        width: 100%;
+        }
+        body {
+            background-color: #01012d;
+        }
+    </style>-->
+
+    <style>
+        body{
+            background: #912cc3;
+            font-family: "Helvetica",sans-serif;
+        }
+        h1 {
+            font-family: "Helvetica",sans-serif;
+        }
+
+        .box{
+            margin-left: 20%;
+            margin-top: 10%;
+            width: 60%;
+            height: 50px;
+            border-bottom: 1px solid;
+            border-color: white;
+        }
+        .alpha{
+            margin-left: 20%;
+            margin-top: 2%;
+            width: 80%;
+        }
+        #party, #partys{
+            margin-left: 33.5%;
+            margin-top: 3%;
+            width: 11%;
+            text-align: center;
+        }
+        #partys{
+            margin-left: 5%;
+            margin-top: 3%;
+            width: 11%;
+            text-align: center;
+        }
+        .gamma{
+            margin-left: 11.5%;
+            margin-top: 2%;
+            width: 80%;
+        }
+        #test {
+            color: white;
+        }
+        .container-1 {
+            width: 100%;
+            vertical-align: middle;
+            white-space: nowrap;
+            position: relative;
+        }
+        .box input#test{
+            width: 100%;
+            height: 50px;
+            background: rgba(177, 201, 255, 0.00);
+            border: none;
+            font-size: 20pt;
+            float: left;
+            padding-left: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            /*font-family: "Chronicle SSm",Georgia,Times,"Times New Roman",serif;*/
+        }
+        #party, #partys{
+            background: rgba(135, 127, 165, 0.7);
+            border: none;
+            font-size: 20pt;
+            float: left;
+            color: white;
+            font-style: white;
+            padding-left: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            /*font-family: "Chronicle SSm",Georgia,Times,"Times New Roman",serif;*/
+        }
+        .go {
+            background: rgba(43, 128, 148, 0.7);
+            border: none;
+            font-size: 15pt;
+            border-radius: 5px;
+            font-family: "Chronicle SSm",Georgia,Times,"Times New Roman",serif;
+            color: white;
+            /*float: left;
+            color: white;
+            font-style: red;
+            padding-left: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            margin-left: 45%;
+            margin-top: 8%;
+
+            /*font-family: "Chronicle SSm",Georgia,Times,"Times New Roman",serif;*/
+        }
+        }
+        .container-4 {
+            overflow: hidden;
+            width: 100%;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .container-4 input#search {
+            width: 100%;
+            height: 50px;
+            background: #2b303b;
+            border: none;
+            font-size: 10pt;
+            float: left;
+            color: #fff;
+            padding-left: 15px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        img {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+        p {
+            float: left;
+            margin-top: 3.1%;
+            margin-left: 5%;
+            font-size: 25px;
+            color: white;
+        }
+
+        a:hover img, a:focus img, a.active img {
+    		filter: none;
+            -webkit-filter: grayscale(0%);
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+<h1 style="color: #e3f1ff; font-size: 80px;"><strong>View of the inputted parameters<strong></h1>
+  <!--<h2>Accordion Example</h2>-->
+  <div class="panel-group" id="accordion">
+    <div class="go">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><strong>Atlas Bellletstalk Bubble Graph</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body"><img style = "width: 100%;" src="images/bellmap.png"></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Atlas Depression Bubble Graph</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body"><img style = "width: 100%;" src="images/depressionmap.png"></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Average weighting</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body"><img style = "width: 100%;" src="images/weightedaverage.png"></div>
+      </div>
+    </div>
+  </div> 
+</div>
+<div>
+<!--<button type="button" class = "go" onclick="myFunction()" >Pull the data</button>-->
+</div>
+</body>
+</html>
